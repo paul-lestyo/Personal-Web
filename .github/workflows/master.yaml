@@ -31,4 +31,5 @@ jobs:
         exclude: |
           **/.git*
           **/.git*/**
+          **/node_modules/
           fileToExclude.txt
