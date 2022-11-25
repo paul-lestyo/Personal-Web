@@ -15,6 +15,17 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '16'
+
+    - name: Cache dependencies
+      id: cache
+      uses: actions/cache@v2
+      with:
+        path: ./node_modules
+        key: modules-${{ hashFiles('package-lock.json') }}
+
+    - name: 🔨 Build Project
+      run: |
+        npm install
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.2
@@ -26,5 +37,4 @@ jobs:
         exclude: |
           **/.git*
           **/.git*/**
-          **/node_modules/
           fileToExclude.txt
