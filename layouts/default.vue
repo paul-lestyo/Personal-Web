@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<header>
+		<header class="text-blue-300 underline flex gap-2">
 			<nuxt-link to="/">Home</nuxt-link>
 			<nuxt-link to="/about">About</nuxt-link>
 			<nuxt-link to="/contact">Contact</nuxt-link>
