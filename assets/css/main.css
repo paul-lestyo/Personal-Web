@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+	@apply bg-gray-200 text-gray-700 p-6 font-poppins;
+}
+
+.soft-card {
+	@apply nm-flat-gray-200-lg rounded-lg overflow-hidden;
+}
