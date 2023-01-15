@@ -1,10 +1,20 @@
 <template>
-	<div>
-		<main v-if="$route.params.slug">
-			<h1 v-text="'Blog ' + $route.params.slug"></h1>
-		</main>
-		<main v-else>
-			<h1>List Blog</h1>
-		</main>
-	</div>
+  <div>
+    <main>
+      <h1>{{ blog.title.toUpperCase() }}</h1>
+		<p> {{ blog.text }} </p>
+    </main>
+  </div>
 </template>
+  
+  <script>
+import axios from "axios";
+export default {
+  async asyncData({params}) {
+    const { data } = await axios.get(`https://api.paulus-lestyo.my.id/blogs/${params.slug}`);
+    console.log(data);
+    return { blog: data };
+  },
+};
+</script>
+  

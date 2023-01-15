@@ -7,6 +7,7 @@
 			<nav class="flex gap-2 md:gap-8 text-sm text-blue-400 justify-evenly">
 				<nuxt-link class="soft-card px-4 py-2" to="/">Home</nuxt-link>
 				<nuxt-link class="soft-card px-4 py-2" to="/about">About</nuxt-link>
+				<nuxt-link class="soft-card px-4 py-2" to="/blog">Blog</nuxt-link>
 				<nuxt-link class="soft-card px-4 py-2" to="/contact">Contact</nuxt-link>
 			</nav>
 		</header>
